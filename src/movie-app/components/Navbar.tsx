@@ -9,7 +9,7 @@ interface Props {
 
 const Navbar = ({ handleClick, active }: Props) => {
    return (
-      <nav className="flex h-14 items-center justify-around bg-slate-700 text-slate-300">
+      <nav className="z-50 flex h-14 items-center justify-around bg-slate-700 text-slate-300">
          <button onClick={handleClick}>
             {active ? (
                <LuChevronLeft size="2.1rem" />
