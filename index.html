@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CineQuixotica</title>
+      <style>
+         html {
+            scroll-behavior: smooth;
+         }
+         #root *::-webkit-scrollbar {
+            width: 0;
+         }
+         #root main::-webkit-scrollbar {
+            width: 4px;
+         }
+
+         /* Handle */
+         #root main::-webkit-scrollbar-thumb {
+            background: #22d3ee;
+            border-radius: 10px;
+         }
+
+         /* Handle on hover */
+         #root main::-webkit-scrollbar-thumb:hover {
+            background: #0891b2;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+   </body>
+</html>
