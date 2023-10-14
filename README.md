@@ -1,15 +1,6 @@
 <h1>Movie App</h1>
 
-Welcome to the Movie App! This README provides an overview of the application, its features, installation instructions, and usage guidelines.
-
-## Table of Contents
-
--  [Introduction](#introduction)
--  [Features](#features)
--  [Installation](#installation)
--  [Usage](#usage)
--  [Contributing](#contributing)
--  [License](#license)
+Welcome to the Movie App! This README provides an overview of the application, and its features.
 
 ## Introduction
 
