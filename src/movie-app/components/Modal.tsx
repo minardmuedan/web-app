@@ -79,7 +79,9 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                               }}
                               className="text-3xl text-slate-900"
                            >
-                              {selectedMovie.title}
+                              {selectedMovie.title
+                                 ? selectedMovie.title
+                                 : selectedMovie.name}
                            </motion.h1>
                            <motion.div
                               initial={{ x: 100, opacity: 0 }}
@@ -88,11 +90,18 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                                  opacity: 1,
                                  transition: { delay: 0.6 },
                               }}
-                              className="grid grid-cols-2"
+                              className="grid grid-cols-2 gap-2"
                            >
                               <p>
-                                 <span>Original title: </span>
-                                 {selectedMovie.original_title}
+                                 <span>
+                                    Original
+                                    {selectedMovie.original_title
+                                       ? ' title: '
+                                       : ' name: '}
+                                 </span>
+                                 {selectedMovie.original_title
+                                    ? selectedMovie.original_title
+                                    : selectedMovie.original_name}
                               </p>
                               <p>
                                  <span>Language: </span>
@@ -103,8 +112,14 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                                  {selectedMovie.vote_average}
                               </p>
                               <p>
-                                 <span>Released: </span>
-                                 {selectedMovie.release_date}
+                                 <span>
+                                    {selectedMovie.release_date
+                                       ? 'Released: '
+                                       : 'First air: '}{' '}
+                                 </span>
+                                 {selectedMovie.release_date
+                                    ? selectedMovie.release_date
+                                    : selectedMovie.first_air_date}
                               </p>
                            </motion.div>
                            <motion.p
@@ -118,7 +133,7 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                               <span>Overview </span>:
                               {selectedMovie.overview
                                  ? selectedMovie.overview
-                                 : 'nothing'}
+                                 : 'not specified'}
                            </motion.p>
 
                            <motion.p
@@ -129,12 +144,12 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                                  transition: { delay: 1 },
                               }}
                            >
-                              Genre:{' '}
+                              Genre:
                               {selectedMovie.genre_ids.map(
                                  (v: any) =>
                                     movieGenres.some(
                                        (movieGenre) => movieGenre.id === v
-                                    ) && 'noo'
+                                    ) && ' noo'
                               )}
                            </motion.p>
                         </div>
