@@ -2,7 +2,7 @@ import Loaders from '../components/Loaders'
 import Modal from '../components/Modal'
 import MovieContainer from '../components/MovieContainer'
 import { Movie } from '../services/MovieApi'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 const MovieLayout = () => {
    const [page, setPage] = useState(2)
 
