@@ -33,10 +33,10 @@ const SideNavbar = () => {
       {
          title: 'Movies',
          contents: [
-            { path: 'movies/', name: 'Popular' },
-            { path: 'movies/top-rated', name: 'Top Rated' },
+            { path: 'movies/', name: 'Now Playing' },
+            { path: 'movies/popular', name: 'Popular' },
+            { path: 'movies/top_rated', name: 'Top Rated' },
             { path: 'movies/upcoming', name: 'Upcoming' },
-            { path: 'movies/now-playing', name: 'Now Playing' },
          ],
          dd: movieDropDown,
          setDd: () => setMovieDropDown(!movieDropDown),
@@ -44,10 +44,10 @@ const SideNavbar = () => {
       {
          title: 'Tv Shows',
          contents: [
-            { path: 'tv-shows/', name: 'Popular' },
-            { path: 'tv-shows/airing-today', name: 'Airing Today' },
-            { path: 'tv-shows/on-the-air', name: 'On Tv' },
-            { path: 'tv-shows/top-rated', name: 'Top Rated' },
+            { path: 'tv-shows/', name: 'Airing Today' },
+            { path: 'tv-shows/popular', name: 'Popular' },
+            { path: 'tv-shows/on_the_air', name: 'On Tv' },
+            { path: 'tv-shows/top_rated', name: 'Top Rated' },
          ],
          dd: tvDropDown,
          setDd: () => setTvDropDown(!tvDropDown),

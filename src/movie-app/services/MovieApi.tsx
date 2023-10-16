@@ -4,13 +4,13 @@ export const MovieImg = (image_path: string) => {
    return `https://image.tmdb.org/t/p/w500/${image_path}`
 }
 
-export const Movie = (page: number) => {
-   const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${page}`
+export const Movie = (watch: string) => {
+   const url = `https://api.themoviedb.org/3/movie/${watch}?language=en-US&`
    return Fetch(url)
 }
 
-export const Tv = () => {
-   const url = 'https://api.themoviedb.org/3/discover/tv'
+export const Tv = (watch: string) => {
+   const url = `https://api.themoviedb.org/3/tv/${watch}?language=en-US`
    return Fetch(url)
 }
 
@@ -27,7 +27,6 @@ export const Tv = () => {
 }
 const Fetch = (url: string) => {
    const [result, setResult] = useState<any[]>([])
-   console.log(result)
    const options = {
       method: 'GET',
       headers: {
@@ -41,7 +40,6 @@ const Fetch = (url: string) => {
          .then((res) => res.json())
          .then((data) => {
             setResult(data.results)
-            console.log(data)
          })
          .catch((err) => console.error('error:' + err))
    }, [])

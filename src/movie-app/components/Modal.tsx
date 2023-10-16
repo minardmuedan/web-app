@@ -42,7 +42,7 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                   animate={{ opacity: 1, transition: { delay: 0.2 } }}
                   exit={{ y: -100, opacity: 0 }}
                   onClick={(e) => e.stopPropagation()}
-                  className="relative max-h-[90%] w-full  flex-col overflow-y-auto overflow-x-hidden md:max-h-full  md:w-3/4"
+                  className="relative max-h-[70%] w-full flex-col overflow-y-auto overflow-x-hidden rounded-lg md:max-h-full md:w-4/5"
                >
                   <div
                      style={
@@ -58,16 +58,16 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                   >
                      <button
                         onClick={() => setSelectedMovie(null)}
-                        className="absolute right-0 top-0 z-50 p-2 lg:hidden"
+                        className="absolute right-0 top-0 z-50 pe-3 pt-4 lg:hidden"
                      >
                         <FaX size="1.5rem" color="white" />
                      </button>
 
-                     <div className="h flex flex-col gap-5 bg-slate-300/60 p-5 backdrop-blur-sm lg:flex-row">
+                     <div className=" flex flex-col gap-5 bg-slate-300/60 p-5 backdrop-blur-sm lg:flex-row">
                         <motion.img
                            layoutId={`movie-${selectedMovie.id}`}
                            src={MovieImg(selectedMovie.poster_path)}
-                           className="h-full w-80"
+                           className="h-full w-44 rounded-xl md:w-80"
                         />
                         <div className="flex flex-1 flex-col gap-2 bg-cover bg-center text-slate-800">
                            <motion.h1
