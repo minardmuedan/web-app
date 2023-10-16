@@ -18,14 +18,14 @@ const Navbar = ({ handleClick, active }: Props) => {
             )}
          </button>
 
-         <div className="flex w-3/4 items-center justify-between rounded-xl border-2 border-slate-300 pe-3">
+         <div className="flex w-3/4 items-center justify-between rounded-xl border-2 border-slate-300">
             <input
                type="text"
                name="search"
                placeholder="search"
                className="flex-1 bg-transparent px-3 py-1 focus:outline-none"
             />
-            <div>
+            <div className="flex flex-1 items-center justify-center">
                <LuSearch size="1.5rem" />
             </div>
          </div>

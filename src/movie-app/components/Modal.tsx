@@ -58,9 +58,9 @@ const Modal = ({ selectedMovie, setSelectedMovie }: Props) => {
                   >
                      <button
                         onClick={() => setSelectedMovie(null)}
-                        className="absolute right-5 top-5 z-50 p-2 lg:hidden"
+                        className="absolute right-0 top-0 z-50 p-2 lg:hidden"
                      >
-                        <FaX size="1.5rem" color="black" />
+                        <FaX size="1.5rem" color="white" />
                      </button>
 
                      <div className="h flex flex-col gap-5 bg-slate-300/60 p-5 backdrop-blur-sm lg:flex-row">
