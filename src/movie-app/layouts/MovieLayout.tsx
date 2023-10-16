@@ -2,12 +2,11 @@ import Loaders from '../components/Loaders'
 import Modal from '../components/Modal'
 import MovieContainer from '../components/MovieContainer'
 import { Movie } from '../services/MovieApi'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 const MovieLayout = () => {
    const [page, setPage] = useState(2)
 
    const [selectedMovie, setSelectedMovie] = useState<object | null>(null)
-   //const movieLists = ['Now Playing', 'Popular', 'Top Rated', 'Upcoming']
    const result = Movie(page)
 
    return (
