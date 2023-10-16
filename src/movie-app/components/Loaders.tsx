@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const Loaders = () => {
    return (
       <div className=" relative flex flex-col gap-2 overflow-hidden">
-         <div className=" h-72 w-full rounded-t-xl bg-slate-700"></div>
+         <div className=" h-56 w-full rounded-t-xl bg-slate-700"></div>
 
          <div className="h-2 w-1/2 rounded-xl bg-slate-700"></div>
 

@@ -1,23 +1,21 @@
 import { MovieImg } from '../services/MovieApi'
+import { motion } from 'framer-motion'
 
 interface Props {
-   image_path: string
-   title: string
-   release_date: string
-   overview: string
-   vote_average: string
+   value: any
+   handleClick: () => void
 }
 
-const MovieContainer = ({ image_path, title }: Props) => {
-   const src = MovieImg(image_path)
+const MovieContainer = ({ value, handleClick }: Props) => {
+   const src = MovieImg(value.poster_path)
    return (
-      <div>
-         <a href="#">
+      <motion.div layoutId={`movie-${value.id}`}>
+         <div onClick={handleClick} className="cursor-pointer">
             <img src={src} alt="img" className="w-full rounded-t-xl" />
 
-            <p>{title}</p>
-         </a>
-      </div>
+            <p>{value.title}</p>
+         </div>
+      </motion.div>
    )
 }
 

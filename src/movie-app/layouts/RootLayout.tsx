@@ -16,12 +16,12 @@ const MoviesLayout = () => {
             <Navbar handleClick={() => setSideNav(!sideNav)} active={sideNav} />
          </header>
 
-         <div className="relative flex h-[calc(100vh-3.5rem)] gap-3 bg-slate-900 p-2 text-slate-400">
+         <div className="relative flex h-[calc(100vh-3.5rem)] gap-3 bg-slate-900 p-2">
             <AnimatePresence>
                {sideNav && (
                   <motion.aside
-                     exit={{ opacity: 0, transition: { duration: 0.8 } }}
-                     className="absolute bottom-0 left-0 z-50 h-[calc(100vh-3.5rem)] w-full bg-slate-300/50 p-2 backdrop-blur-sm md:static md:h-full md:w-fit md:bg-transparent md:p-0"
+                     exit={{ opacity: 0 }}
+                     className="absolute bottom-0 left-0 z-30 h-[calc(100vh-3.5rem)] w-full bg-slate-300/50 p-2 backdrop-blur-sm md:static md:h-full md:w-fit md:bg-transparent md:p-0"
                   >
                      <SideNavbar />
                   </motion.aside>
