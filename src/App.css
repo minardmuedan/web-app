@@ -7,3 +7,8 @@
 * {
    font-family: 'Poppins';
 }
+
+button:active,
+a:active {
+   background-color: rgb(6, 182, 212);
+}
