@@ -13,7 +13,7 @@ const MovieContainer = ({ value, handleClick }: Props) => {
          <div onClick={handleClick} className="cursor-pointer">
             <img src={src} alt="img" className="w-full rounded-t-xl" />
 
-            <p>{value.title}</p>
+            <p>{value.title != null ? value.title : value.name}</p>
          </div>
       </motion.div>
    )
